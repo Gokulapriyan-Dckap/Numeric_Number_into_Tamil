@@ -1,0 +1,35 @@
+<ConverterLayout>:
+    orientation: "vertical"
+    padding: 20
+
+    BoxLayout:
+        orientation: "horizontal"
+        Label:
+            text: "Enter a number:"
+            size_hint_x: 0.4
+            font_size: 40
+        TextInput:
+            id: input_text
+            multiline: False
+            font_size: 40
+            size_hint_x: 0.3
+
+    Button:
+        text: "Convert"
+        size_hint_y: 0.2
+        font_size: 60
+        on_press: root.convert_number()
+
+    Label:
+        id: output_label
+        text: ""
+        size_hint_y: 0.4
+        font_size: 40
+        font_name: "Noto_Sans_Tamil/NotoSansTamil-VariableFont_wdth,wght.ttf"
+
+    Button:
+        text: "Copy"
+        size_hint_y: 0.1
+        font_size: 40
+        on_press: root.copy_output_text()
+
